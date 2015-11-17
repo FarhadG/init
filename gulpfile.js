@@ -14,7 +14,7 @@ var config = {
   watch: './index.js',
   js: {
     src: './index.js',
-    destination: 'dist/'
+    destination: 'landing/'
   }
 };
 
