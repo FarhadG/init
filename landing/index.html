@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -9,7 +10,14 @@
   <meta name='author' content='Farhad Ghayour'>
   <meta property='og:title' content='Init: A quick way to go to the first commit of a repo' />
   <meta property='og:url' content='http://farhadg.github.io/init/' />
+
+
   <style>
+    html {
+      background: #199968;
+      zoom: 125%;
+    }
+    
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-style: normal;
@@ -18,18 +26,23 @@
       font-size: 16px;
       line-height: 1.6em;
     }
+    
     p {
       margin: 20px 0;
+      font-size: 20px;
     }
+    
     .container {
       width: 500px;
       margin: auto;
-      margin-top: 130px;
+      margin-top: 80px;
       text-align: center;
     }
+    
     a {
       text-decoration: none;
     }
+    
     #init {
       background: #7bc673;
       color: white;
@@ -41,14 +54,54 @@
       display: block;
       text-align: center;
       transition: background 0.2s;
+      -webkit-box-shadow: 5px 2px 4px 0px rgba(33, 33, 33, 0.53);
+      -moz-box-shadow: 5px 2px 4px 0px rgba(33, 33, 33, 0.53);
+      box-shadow: 5px 2px 4px 0px rgba(33, 33, 33, 0.53);
     }
+    
     #init:hover {
-      background: #ff6e41;
+      background: #ff4111;
       position: relative;
-      top: -1px;
+      top: -.5px;
+      -webkit-box-shadow: 11px 11px 23px 0px rgba(33, 33, 33, 0.53);
+      -moz-box-shadow: 11px 11px 23px 0px rgba(33, 33, 33, 0.53);
+      box-shadow: 11px 11px 23px 0px rgba(33, 33, 33, 0.53);
+    }
+        #init:active {
+      background: #ff1111;
+      top: 1px;
+      -webkit-box-shadow: 8px 11px 23px 0px rgba(33, 33, 33, 0.53);
+      -moz-box-shadow: 8px 11px 23px 0px rgba(33, 33, 33, 0.53);
+      box-shadow: 8px 11px 23px 0px rgba(33, 33, 33, 0.53);
+    }
+    
+    .weTake {
+      font-size: 20px;
+    }
+    
+    #back {
+      -webkit-animation-name: back;
+      -webkit-animation-duration: 1.5s;
+      -webkit-animation-timing-function: ease-in;
+      -webkit-animation-iteration-count: 1;
+    }
+    
+    @keyframes back {
+      0% {
+        -webkit-transform: translateX(500px) rotate(540deg);
+        transform: translateX(500px) rotate(540deg);
+      }
+      100% {
+        -webkit-transform: translateX(0px) rotate(0deg);
+        transform: translateX(0px) rotate(0deg);
+      }
     }
   </style>
+  <!--Favicon-->
+  <link rel="icon" type="ico" href="I.ico" />
+
 </head>
+
 <body>
 
   <div class="container">
@@ -56,9 +109,14 @@
 
     <a id="init" target='_blank' href='javascript:!function(t){function e(t,e,n){try{n=new(this.XMLHttpRequest||ActiveXObject)("MSXML2.XMLHTTP.3.0"),n.open("GET",t,1),n.setRequestHeader("X-Requested-With","XMLHttpRequest"),n.setRequestHeader("Content-type","application/x-www-form-urlencoded"),n.onreadystatechange=function(){n.readyState>3&&e&&e(n)},n.send("GET")}catch(o){window.console&&console.log(o)}}function n(t){return window.location=t}function o(){return e(i+ ++s,function(t){return 200!==t.status?n(i+--s):o()})}function r(){return e(i+--s,function(t){return 200===t.status?n(i+s++):r()})}function u(t){return 200===t.status?o():r()}function c(t){var e="master";if(~t.indexOf("/tree/")){var n=t.split("/tree/");t=n[0],e=n[1]}return t+"/commits/"+e+"?page="}var i=c(t),s=+document.querySelectorAll(".commits .num")[0].textContent.replace(/[,\s]/g,"")/35|1;e(i+s,u)}(window.location.href);'>INIT</a>
 
+    <p class="weTake">Init, we take you
+      <span id="back">back.</span>
+    </p>
+
     <p>By: <a href="https://github.com/farhadg/init" target="_blank">Farhad Ghayour</a></p>
   </div>
 
-</script>
+  </script>
 </body>
+
 </html>
