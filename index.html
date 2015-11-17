@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Init: A quick way to go to the first commit of a repo</title>
+  <meta name='description' content='Init: A quick way to go to the first commit of a repo'>
+  <meta name='author' content='Farhad Ghayour'>
+  <meta property='og:title' content='Init: A quick way to go to the first commit of a repo' />
+  <meta property='og:url' content='http://farhadg.github.io/init/' />
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.6em;
+    }
+    .container {
+      width: 800px;
+      margin: auto;
+      margin-top: 100px;
+      text-align: center;
+    }
+    #init {
+      background: #7bc673;
+      color: white;
+      border-radius: 3px;
+      padding: 20px 20px;
+      font-size: 24px;
+      text-decoration: none;
+      margin: auto;
+      width: 100px;
+      display: block;
+      text-align: center;
+      transition: background 0.2s;
+    }
+    #init:hover {
+      background: #ff6e41;
+      position: relative;
+      top: -1px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <p>Drag this bookmarklet (link) to your bookmark bar and then click it, while visiting any GitHub repo</p>
+
+    <a id="init" href='javascript: !function(t){function e(t,e,n){try{n=new(this.XMLHttpRequest||ActiveXObject)("MSXML2.XMLHTTP.3.0"),n.open("GET",t,1),n.setRequestHeader("X-Requested-With","XMLHttpRequest"),n.setRequestHeader("Content-type","application/x-www-form-urlencoded"),n.onreadystatechange=function(){n.readyState>3&&e&&e(n)},n.send("GET")}catch(o){window.console&&console.log(o)}}function n(t){return window.location=t}function o(){e(i+ ++a,function(t){return 200!==t.status?n(i+--a):o()})}function c(){e(i+--a,function(t){return 200===t.status?n(i+a++):c()})}function u(t){200===t.status?o():c()}function r(t){var e="master";if(~t.indexOf("/tree/")){var n=t.split("/tree/");t=n[0],e=n[1]}return t+"/commits/"+e+"?page="}var i=r(t),a=+document.querySelectorAll(".commits .num")[0].textContent.replace(/[,\s]/g,"")/35|1;e(i+a,u);document.createElement("a")}(window.location.href);' target='_blank'>INIT</a>
+  </div>
+
+</script>
+</body>
+</html>
