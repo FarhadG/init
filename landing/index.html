@@ -54,7 +54,7 @@
   <div class="container">
     <p>Drag this bookmarklet (link) to your bookmark bar and then click it, while visiting any GitHub repo.</p>
 
-    <a id="init" target='_blank' href='javascript:!function(){var t=~~(1e7*Math.random()),d=document.createElement("script");d.src="https://farhadg.github.io/init/landing/index.js?"+t,document.body.appendChild(d)}();'>INIT</a>
+    <a id="init" target='_blank' href='javascript:!function(t){function e(t,e,n){try{n=new(this.XMLHttpRequest||ActiveXObject)("MSXML2.XMLHTTP.3.0"),n.open("GET",t,1),n.setRequestHeader("X-Requested-With","XMLHttpRequest"),n.setRequestHeader("Content-type","application/x-www-form-urlencoded"),n.onreadystatechange=function(){n.readyState>3&&e&&e(n)},n.send("GET")}catch(o){window.console&&console.log(o)}}function n(t){return window.location=t}function o(){return e(i+ ++s,function(t){return 200!==t.status?n(i+--s):o()})}function r(){return e(i+--s,function(t){return 200===t.status?n(i+s++):r()})}function u(t){return 200===t.status?o():r()}function c(t){var e="master";if(~t.indexOf("/tree/")){var n=t.split("/tree/");t=n[0],e=n[1]}return t+"/commits/"+e+"?page="}var i=c(t),s=+document.querySelectorAll(".commits .num")[0].textContent.replace(/[,\s]/g,"")/35|1;e(i+s,u)}(window.location.href);'>INIT</a>
 
     <p>By: <a href="https://github.com/farhadg/init" target="_blank">Farhad Ghayour</a></p>
   </div>
