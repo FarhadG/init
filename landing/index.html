@@ -5,19 +5,19 @@
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <title>Init: A quick way to go to the first commit of a repo</title>
   <meta name='description' content='Init: A quick way to go to the first commit of a repo'>
   <meta name='author' content='Farhad Ghayour'>
   <meta property='og:title' content='Init: A quick way to go to the first commit of a repo' />
   <meta property='og:url' content='http://farhadg.github.io/init/' />
-
-
+  <title>Init: A quick way to go to the first commit of a repo</title>
+  <link rel="icon" type="ico" href="I.ico" />
   <style>
     html {
       background: #199968;
       zoom: 125%;
+      color: white;
     }
-    
+
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-style: normal;
@@ -26,23 +26,24 @@
       font-size: 16px;
       line-height: 1.6em;
     }
-    
+
     p {
       margin: 20px 0;
       font-size: 20px;
     }
-    
+
     .container {
       width: 500px;
       margin: auto;
       margin-top: 80px;
       text-align: center;
     }
-    
+
     a {
       text-decoration: none;
+      color: rgba(255, 255, 255, 0.6);
     }
-    
+
     #init {
       background: #7bc673;
       color: white;
@@ -58,7 +59,7 @@
       -moz-box-shadow: 5px 2px 4px 0px rgba(33, 33, 33, 0.53);
       box-shadow: 5px 2px 4px 0px rgba(33, 33, 33, 0.53);
     }
-    
+
     #init:hover {
       background: #ff4111;
       position: relative;
@@ -67,25 +68,26 @@
       -moz-box-shadow: 11px 11px 23px 0px rgba(33, 33, 33, 0.53);
       box-shadow: 11px 11px 23px 0px rgba(33, 33, 33, 0.53);
     }
-        #init:active {
+
+    #init:active {
       background: #ff1111;
       top: 1px;
       -webkit-box-shadow: 8px 11px 23px 0px rgba(33, 33, 33, 0.53);
       -moz-box-shadow: 8px 11px 23px 0px rgba(33, 33, 33, 0.53);
       box-shadow: 8px 11px 23px 0px rgba(33, 33, 33, 0.53);
     }
-    
+
     .weTake {
       font-size: 20px;
     }
-    
+
     #back {
       -webkit-animation-name: back;
       -webkit-animation-duration: 1.5s;
       -webkit-animation-timing-function: ease-in;
       -webkit-animation-iteration-count: 1;
     }
-    
+
     @keyframes back {
       0% {
         -webkit-transform: translateX(500px) rotate(540deg);
@@ -97,11 +99,7 @@
       }
     }
   </style>
-  <!--Favicon-->
-  <link rel="icon" type="ico" href="I.ico" />
-
 </head>
-
 <body>
 
   <div class="container">
@@ -113,10 +111,9 @@
       <span id="back">back.</span>
     </p>
 
-    <p>By: <a href="https://github.com/farhadg/init" target="_blank">Farhad Ghayour</a></p>
+    <a href="https://github.com/farhadg/init" target="_blank">By: Farhad Ghayour</a>
   </div>
 
   </script>
 </body>
-
 </html>
