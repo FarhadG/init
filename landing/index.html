@@ -12,11 +12,6 @@
   <title>Init: A quick way to go to the first commit of a repo</title>
   <link rel="icon" type="ico" href="I.ico" />
   <style>
-    html {
-      zoom: 125%;
-      color: white;
-    }
-    
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       font-style: normal;
@@ -24,11 +19,13 @@
       font-weight: 500;
       font-size: 16px;
       line-height: 1.6em;
-      background-color: rgb(25, 153, 104);
+      background-color: white;
+      color: black;
     }
     
-    .bodyChange {
+    .body-change {
       background-color: rgba(0, 0, 0, .9);
+      color: white;
     }
     
     p {
@@ -91,7 +88,7 @@
       box-shadow: 8px 11px 23px 0px rgba(33, 33, 33, 0.53);
     }
     
-    .weTake {
+    .we-take {
       font-size: 20px;
     }
     
@@ -170,6 +167,11 @@
         transform: translateX(0px);
       }
     }
+
+    .github {
+      color: #DD1D1D;
+      text-decoration: underline;
+    }
   </style>
 </head>
 
@@ -187,29 +189,29 @@
 
     <a id="init" target='_blank' href='javascript:!function(t){function e(t,e,n){try{n=new(this.XMLHttpRequest||ActiveXObject)("MSXML2.XMLHTTP.3.0"),n.open("GET",t,1),n.setRequestHeader("X-Requested-With","XMLHttpRequest"),n.setRequestHeader("Content-type","application/x-www-form-urlencoded"),n.onreadystatechange=function(){n.readyState>3&&e&&e(n)},n.send("GET")}catch(o){window.console&&console.log(o)}}function n(t){return window.location=t}function o(){return e(s+ ++i,function(t){return 200!==t.status?n(s+--i):o()})}function r(){return e(s+--i,function(t){return 200===t.status?n(s+i++):r()})}function u(t){return 200===t.status?o():r()}function c(t){var e=document.querySelectorAll(".select-menu .css-truncate-target.js-select-button")[0].textContent;if(~t.indexOf("/tree/")){var n=t.split("/tree/");t=n[0],e=n[1]}else e||(e="master");return t+"/commits/"+e+"?page="}var s=c(t),i=+document.querySelectorAll(".commits .num")[0].textContent.replace(/[,\s]/g,"")/35|1;e(s+i,u)}(window.location.href);'>INIT</a>
 
-    <p class="hoverInstructions" id="hide"><span id="clickDrag">Click  and  Drag</span> this bookmarklet to your bookmark bar</p>
+    <p class="hover-instructions" id="hide"><span id="clickDrag">Click  and  Drag</span> this bookmarklet to your bookmark bar</p>
 
-    <p class="weTake" id="info">Init, we take you
+    <p class="we-take" id="info">Init, we take you
       <span id="back">back.</span>
     </p>
 
-    <a href="https://github.com/farhadg/init" target="_blank">By: Farhad Ghayour</a>
+    <a class="github" href="https://github.com/farhadg/init" target="_blank">Star the GitHub Repo :)</a>
   </div>
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script>
     $("#init").mouseover(function(){
-    $("body").addClass("bodyChange");
+    $("body").addClass("body-change");
     $("#info").hide();
     $("#arrow").show();
-    $(".hoverInstructions").fadeIn();
-    $(".weTake").hide();
+    $(".hover-instructions").fadeIn();
+    $(".we-take").hide();
   }).mouseout(function() {
-    $("body").removeClass("bodyChange")
+    $("body").removeClass("body-change")
     $("#info").show();
     $("#arrow").hide();
-    $(".hoverInstructions").hide();
-    $(".weTake").fadeIn();
+    $(".hover-instructions").hide();
+    $(".we-take").fadeIn();
   });
   </script>
 </body>
