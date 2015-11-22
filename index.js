@@ -46,11 +46,14 @@
 
   // returns the current location (including the branch)
   function parseLocation(location) {
-    var branch = 'master';
+    var branch = document.querySelectorAll('.select-menu .css-truncate-target.js-select-button')[0].textContent;
     if (~location.indexOf('/tree/')) {
       var params = location.split('/tree/');
       location = params[0];
       branch = params[1];
+    }
+    else if (!branch) {
+      branch = 'master';
     }
     return location+'/commits/'+branch+'?page=';
   }
