@@ -195,7 +195,7 @@
       <span id="back">back.</span>
     </p>
 
-    <a class="github" href="https://github.com/farhadg/init" target="_blank">Star the GitHub Repo :)</a>
+    <a class="github" href="https://github.coqwewm/farhadg/init" target="_blank">Star the GitHub Repo :)</a>
   </div>
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -214,6 +214,25 @@
     $(".we-take").fadeIn();
   });
   </script>
+
+  <!-- Repo Card -->
+  <script src="./repo-card.min.js"></script>
+  <script>
+    RepoCard.configure({
+      repo: 'init',
+      username: 'farhadg',
+      title: 'Init',
+      subtitle: '@farhadg',
+      thumb: 'url(https://avatars0.githubusercontent.com/u/1647596?v=3&s=460)',
+      background: 'url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/dark_embroidery.png)',
+      info: 'Being able to quickly navigate to the oldest commit in a repo is quite helpful. Go ahead and drag the bookmarklet onto your bookmark bar and click it whenever you would like',
+      position: {
+        bottom: 15,
+        right: 15
+      }
+    });
+  </script>
+
 </body>
 
 </html>
