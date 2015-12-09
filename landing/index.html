@@ -19,13 +19,14 @@
       font-weight: 500;
       font-size: 16px;
       line-height: 1.6em;
-      background-color: white;
-      color: black;
+      background-color: #585858;
+      color: white;
+      zoom: 125%;
     }
     
     .body-change {
       background-color: rgba(0, 0, 0, .9);
-      color: white;
+      color: white ;
     }
     
     p {
@@ -40,13 +41,21 @@
       text-align: center;
     }
     
-    a {
-      text-decoration: none;
-      color: rgba(255, 255, 255, 0.6);
+    .github{
+      font-size: 20px;
     }
     
-    #arrow {
-      display: none;
+    a {
+      text-decoration: none;
+      color: #00B4FF;
+    }
+    
+    a:visited{
+      text-decoration: none;
+      color: #00B4F1;
+    }
+    
+    #arrow svg {
       height: auto;
       width: 100px;
       fill: white;
@@ -54,6 +63,11 @@
       -webkit-animation-duration: 1s;
       -webkit-animation-timing-function: linear;
       -webkit-animation-iteration-count: 10000;
+    }
+    
+    .bring-out {
+      position: relative;
+      top: -125px;
     }
     
     #init {
@@ -99,15 +113,23 @@
       -webkit-animation-iteration-count: 1;
     }
     
-    #clickDrag {
+    #click-drag {
       -webkit-animation-name: clickDrag;
       -webkit-animation-duration: 2s;
       -webkit-animation-timing-function: linear;
       -webkit-animation-iteration-count: 1;
     }
     
-    #hide {
-      display: none
+    .hide {
+      opacity: 0;
+    }
+    
+    #display-none{
+      display:none;
+    }
+    
+    .show {
+      opacity: 1;
     }
     
     @keyframes back {
@@ -167,11 +189,7 @@
         transform: translateX(0px);
       }
     }
-
-    .github {
-      color: #DD1D1D;
-      text-decoration: underline;
-    }
+    
   </style>
 </head>
 
@@ -180,43 +198,64 @@
   <div class="container">
     <p id="info">Drag this bookmarklet (link) to your bookmark bar and then click it, while visiting any GitHub repo.</p>
 
-    <svg id="arrow" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-    x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-      <polygon points="256.5,64.5 64.5,256.5 176.5,256.5 176.5,448.5 336.5,448.5 336.5,256.5 448.5,256.5 " />
-    </svg>
+    <div class="bring-out">
+      <div id="arrow" class="hide">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+          <polygon points="256.5,64.5 64.5,256.5 176.5,256.5 176.5,448.5 336.5,448.5 336.5,256.5 448.5,256.5 " />
+        </svg>
+      </div>
+      <br>
 
-    <br>
+      <a id="init" target='_blank' href='javascript:!function(t){function e(t,e,n){try{n=new(this.XMLHttpRequest||ActiveXObject)("MSXML2.XMLHTTP.3.0"),n.open("GET",t,1),n.setRequestHeader("X-Requested-With","XMLHttpRequest"),n.setRequestHeader("Content-type","application/x-www-form-urlencoded"),n.onreadystatechange=function(){n.readyState>3&&e&&e(n)},n.send("GET")}catch(o){window.console&&console.log(o)}}function n(t){return window.location=t}function o(){return e(s+ ++i,function(t){return 200!==t.status?n(s+--i):o()})}function r(){return e(s+--i,function(t){return 200===t.status?n(s+i++):r()})}function u(t){return 200===t.status?o():r()}function c(t){var e=document.querySelectorAll(".select-menu .css-truncate-target.js-select-button")[0].textContent;if(~t.indexOf("/tree/")){var n=t.split("/tree/");t=n[0],e=n[1]}else e||(e="master");return t+"/commits/"+e+"?page="}var s=c(t),i=+document.querySelectorAll(".commits .num")[0].textContent.replace(/[,\s]/g,"")/35|1;e(s+i,u)}(window.location.href);'>INIT</a>
 
-    <a id="init" target='_blank' href='javascript:!function(t){function e(t,e,n){try{n=new(this.XMLHttpRequest||ActiveXObject)("MSXML2.XMLHTTP.3.0"),n.open("GET",t,1),n.setRequestHeader("X-Requested-With","XMLHttpRequest"),n.setRequestHeader("Content-type","application/x-www-form-urlencoded"),n.onreadystatechange=function(){n.readyState>3&&e&&e(n)},n.send("GET")}catch(o){window.console&&console.log(o)}}function n(t){return window.location=t}function o(){return e(s+ ++i,function(t){return 200!==t.status?n(s+--i):o()})}function r(){return e(s+--i,function(t){return 200===t.status?n(s+i++):r()})}function u(t){return 200===t.status?o():r()}function c(t){var e=document.querySelectorAll(".select-menu .css-truncate-target.js-select-button")[0].textContent;if(~t.indexOf("/tree/")){var n=t.split("/tree/");t=n[0],e=n[1]}else e||(e="master");return t+"/commits/"+e+"?page="}var s=c(t),i=+document.querySelectorAll(".commits .num")[0].textContent.replace(/[,\s]/g,"")/35|1;e(s+i,u)}(window.location.href);'>INIT</a>
+      <p class="hover-instructions" id="display-none">
+        <span id="click-drag">Click  and  Drag</span> this bookmarklet to your bookmark bar
+      </p>
 
-    <p class="hover-instructions" id="hide"><span id="clickDrag">Click  and  Drag</span> this bookmarklet to your bookmark bar</p>
+      <p class="we-take" id="info">Init, we take you
+        <span id="back">back.</span>
+      </p>
 
-    <p class="we-take" id="info">Init, we take you
-      <span id="back">back.</span>
-    </p>
-
-    <a class="github" href="https://github.com/farhadg/init" target="_blank">Star the GitHub Repo :)</a>
-  </div>
+      <a class="github" href="https://github.com/farhadg/init" target="_blank">Star the GitHub Repo :)</a>
+    </div>
 
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script>
-    $("#init").mouseover(function(){
-    $("body").addClass("body-change");
-    $("#info").hide();
-    $("#arrow").show();
-    $(".hover-instructions").fadeIn();
-    $(".we-take").hide();
-  }).mouseout(function() {
-    $("body").removeClass("body-change")
-    $("#info").show();
-    $("#arrow").hide();
-    $(".hover-instructions").hide();
-    $(".we-take").fadeIn();
-  });
+    $(function() {
+      
+      var $body = $("body"),
+          $info = $("#info"),
+          $arrow = $("#arrow"),
+          $hoverInstructions = $(".hover-instructions"),
+          $weTake = $(".we-take");
+      
+      function handleMouseOver() {
+        $body.toggleClass("body-change");
+        $info.toggleClass("hide");
+        $arrow.toggleClass("show");
+        $hoverInstructions.fadeIn();
+        $weTake.hide();
+      }
+      
+      function handleMouseOut() {
+        $body.toggleClass("body-change");
+        $arrow.toggleClass("show");
+        $info.toggleClass("hide");
+        $hoverInstructions.hide();
+        $weTake.fadeIn();
+      }
+          
+      $("#init")
+        .mouseover(handleMouseOver)
+        .mouseout(handleMouseOut);
+        
+    });
   </script>
 
   <!-- Repo Card -->
   <script src="https://rawgit.com/FarhadG/repo-card/master/repo-card.min.js#a"></script>
+
   <script>
     RepoCard.configure({
       repo: 'init',
