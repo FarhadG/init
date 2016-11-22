@@ -16,7 +16,13 @@ I'll probably build this into a browser extension soon, but for now, you can sim
 ### Coming
 
 - Browser extension
-- Better build process
 - Support for BitBucket (others?)
 
 By: <a href="https://github.com/farhadg" target="_blank">Farhad Ghayour</a>
+
+#### Contributors
+
+Thanks to all of these people who've improved INIT for everyone:
+
+- [@PitaJ](https://github.com/PitaJ)
+- [@JamesWP](https://github.com/JamesWP)

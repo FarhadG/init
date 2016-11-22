@@ -2,7 +2,7 @@
   "name": "init",
   "version": "0.0.1",
   "description": "A quick way to go to the first commit of a repo",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp",
@@ -22,9 +22,15 @@
   ],
   "author": "Farhad Ghayour",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-plugin-transform-function-to-arrow": "^0.1.1",
+    "babel-preset-babili": "0.0.8",
+    "concat-stream": "^1.5.2",
     "gulp": "^3.9.0",
-    "gulp-uglify": "^1.5.1",
-    "gulp-util": "^3.0.7"
+    "gulp-util": "^3.0.7",
+    "gulp-babel": "^6.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4"
   }
 }
