@@ -5,7 +5,7 @@
   // args[1] is the `orgname/repo` url fragment
   // args[2] is the optional branch or hash
 
-  return fetch('https://api.github.com/repos/' + args[1] + '/commits?sha=' + args[2])
+  return fetch('https://api.github.com/repos/' + args[1] + '/commits?sha=' + (args[2] || ''))
 
     // the link header has additional urls for paging
     // parse the original JSON for the case where no other pages exist
