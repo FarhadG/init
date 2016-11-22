@@ -22,15 +22,13 @@
   ],
   "author": "Farhad Ghayour",
   "license": "MIT",
-  "dependencies": {
-    "gulp": "^3.9.0",
-    "gulp-util": "^3.0.7"
-  },
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-plugin-transform-function-to-arrow": "^0.1.1",
     "babel-preset-babili": "0.0.8",
     "concat-stream": "^1.5.2",
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.7",
     "gulp-babel": "^6.1.2",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4"
