@@ -18,8 +18,6 @@ I'll probably build this into a browser extension soon, but for now, you can sim
 - Browser extension
 - Support for BitBucket (others?)
 
-By: <a href="https://github.com/farhadg" target="_blank">Farhad Ghayour</a>
-
 #### Contributors
 
 Thanks to all of these people who've improved INIT for everyone:
@@ -27,3 +25,4 @@ Thanks to all of these people who've improved INIT for everyone:
 - [@PitaJ](https://github.com/PitaJ)
 - [@JamesWP](https://github.com/JamesWP)
 - [@Amad27](https://github.com/Amad27)
+- [@FarhadG](https://github.com/FarhadG)
