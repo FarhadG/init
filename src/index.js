@@ -35,3 +35,4 @@
     // navigate there
     .then(url => window.location = url);
 })(window.location.pathname.match(/\/([^\/]+\/[^\/]+)(?:\/tree\/([^\/]+))?/));
+void(0)
