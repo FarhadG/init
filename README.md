@@ -26,3 +26,4 @@ Thanks to all of these people who've improved INIT for everyone:
 - [@JamesWP](https://github.com/JamesWP)
 - [@Amad27](https://github.com/Amad27)
 - [@FarhadG](https://github.com/FarhadG)
+- [@Stevoisiak](https://github.com/Stevoisiak)
