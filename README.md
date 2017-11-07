@@ -1,11 +1,11 @@
 INIT
 ====
 
-A <a href="http://farhadg.github.io/init/landing/" target="_blank">bookmarklet</a> to quickly get you to the first commit of a repo.
+A [bookmarklet](http://farhadg.github.io/init/landing/) to quickly get you to the first commit of a repo.
 
 ### Overview
 
-Being able to quickly navigate to the oldest commit in a repo is quite helpful. Go ahead and drag the <a href="http://farhadg.github.io/init/landing/" target="_blank">bookmarklet (link)</a> onto your bookmark bar and click it whenever you'd like to go to the first commit of a repo.
+Being able to quickly navigate to the oldest commit in a repo is quite helpful. Go ahead and drag the [bookmarklet (link)](http://farhadg.github.io/init/landing/) onto your bookmark bar and click it whenever you'd like to go to the first commit of a repo.
 
 ### Usage
 
@@ -26,3 +26,4 @@ Thanks to all of these people who've improved INIT for everyone:
 - [@JamesWP](https://github.com/JamesWP)
 - [@Amad27](https://github.com/Amad27)
 - [@FarhadG](https://github.com/FarhadG)
+- [@Stevoisiak](https://github.com/Stevoisiak)
